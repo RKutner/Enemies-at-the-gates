@@ -37,22 +37,60 @@
         North. It falls to you, a lone commander on the front, to defend your homeland. Use the four Soul Crystals
         issued to you to hold off the enemy, but beware; should you overextend yourself defending from any particular
         wave, you will have insufficient resources for the next. Shepherd your resources carefully.</p>
-      <button id=startGame class="btn">Start Game!</button>
     </header>
 
     <header class="jumbotron my-4">
-      <h1 class="display-3">Your situation</h1>
-      <p class="lead">Your nation faces a dire threat; enemy forces come from the West while your forces are busy in the
-        North. It falls to you, a lone commander on the front, to defend your homeland. Use the four Soul Crystals
-        issued to you to hold off the enemy, but beware; should you perform too well, your superiors will assume you
-        have things well in hand. You know there are enemy reinforcements coming, and you can't hold out forever.</p>
-      <button id=startGame class="btn">Start Game!</button>
+      <h1 class="display-3">Your performance</h1>
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Wins</h4>
+              <p class="card-text wins">Enemy waves efficiently driven off</p>
+              <div id="wins"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Losses</h4>
+              <p class="card-text wins">Enemy waves that got past you or for which you overallocated resorces</p>
+              <div id="losses"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Enemy Strength</h4>
+              <p class="card-text wins">The strength of the incoming wave</p>
+              <div id="target"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Your Strength</h4>
+              <p class="card-text wins">Your allocated strength for this wave. Match it to the Enemy's strength to win!
+              </p>
+              <div id="result"></div>
+            </div>
+          </div>
+        </div>
+
+
     </header>
 
     <div class="row text-center">
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="./assets/images/Ninja.png" alt="">
+          <button  class="btn" 'ninja'>
+            <img class="card-img-top" src="./assets/images/Ninja.png" alt="Ninja Crystal">
+          </button>
           <div class="card-body">
             <h4 class="card-title">Draw upon this Soul Crystal</h4>
             <p class="card-text">The Soul of the Ninja glows softly. Its impact is subtle, but powerful.</p>
@@ -64,7 +102,10 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="./assets/images/Paladin.png" alt="">
+          <button class="btn" value=paladin>
+
+            <img class="card-img-top" src="./assets/images/Paladin.png" alt="Paladin Crystal">
+          </button>
           <div class="card-body">
             <h4 class="card-title">Draw upon this Soul Crystal</h4>
             <p class="card-text">The Soul of the Paladin shines valiantly. Draw strength from it, and it will keep you
@@ -77,7 +118,9 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="./assets/images/Summoner.png" alt="">
+          <button class="btn" value=summoner>
+            <img class="card-img-top" src="./assets/images/Summoner.png" alt="Summoner Crystal">
+          </button>
           <div class="card-body">
             <h4 class="card-title">Draw upon this Soul Crystal</h4>
             <p class="card-text">The Soul of the Summoner radiates both light and a low, thrumming sound. Call upon it
@@ -90,12 +133,17 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
+          <button class="btn" value=scholar>
+
           <img class="card-img-top" src="./assets/images/Scholar.png" alt="">
           <div class="card-body">
-            <h4 class="card-title">Draw upon this Soul Crystal</h4>
-            <p class="card-text">The Soul of the Scholar glimmers brightly. Through it, your allies may be protected
-              from harm</p>
+
+              <h4 class="card-title">Draw upon this Soul Crystal</h4>
+              <p class="card-text">The Soul of the Scholar glimmers faintly. With it, your allies may be protected
+                from harm</p>
           </div>
+        </button>
+
           <div class="card-footer">
           </div>
         </div>
@@ -113,8 +161,9 @@
     </div> -->
   </footer>
 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src= "./assets/javascript/game.js"></script>
 
 </body>
 
